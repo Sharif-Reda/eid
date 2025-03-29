@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تهنئة عيد الفطر المبارك للأصدقاء</title>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            text-align: center;
+            background-color: #fffbf0;
+            padding: 50px;
+            direction: rtl;
+        }
+        .greeting {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            max-width: 400px;
+            margin: auto;
+        }
+        h1 {
+            color: #d48806;
+            font-size: 24px;
+        }
+        .emoji {
+            font-size: 30px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="greeting">
+        <div class="emoji">🎉✨🌙🕌💖</div>
+        <h1 id="message"></h1>
+        <div class="emoji">💖🕌🌙✨🎉</div>
+    </div>
+
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+        
+        const name = getQueryParam('name') || 'صديقي العزيز';
+        document.getElementById('message').innerHTML = `💛 شريف رضا يهنئك بعيد الفطر المبارك! 💛<br> أعاده الله عليك وعلى أحبابك بالخير واليمن والبركات، <b>${name}</b>! 🌙🕌✨`;
+    </script>
+</body>
+</html>
